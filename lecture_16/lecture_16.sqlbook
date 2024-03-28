@@ -36,11 +36,7 @@ panel on the left:
 
 Delete existing table
 -- SQLBook: Code
-<<<<<<< HEAD
--- Active: 1710939164677@@127.0.0.1@5432@postgres
-=======
--- Active: 1710903290079@@127.0.0.1@5432@postgres
->>>>>>> 1e1bad20876c9b790246ea8115fa94c49ae657fb
+-- Active: 1711660634072@@127.0.0.1@5432@postgres
 -- If the table already exists we can drop it:
 -- If it doesn't exist nothing happens
 -- System commands are in upper case and user defined
@@ -53,6 +49,7 @@ DROP TABLE IF EXISTS drivers;
 
 Create empty table from codebook
 -- SQLBook: Code
+-- Active: 1711660634072@@127.0.0.1@5432@postgres
 -- Create empty TABLE called "drivers"
 -- This example has five arguments separated by a comma
 -- that contain the "column_name" and "column_type", respectively
@@ -68,12 +65,13 @@ CREATE TABLE drivers(
 
 Add rows to table
 -- SQLBook: Code
+-- Active: 1711545899797@@127.0.0.1@5432@postgres
 -- "INSET INTO" adds rows with VALUES ... to the bottom of the table
 -- In SQL different lines need to be separated by a semicolon ";"
 -- You write system commands in capital letters to easily distinguish
 -- column names from system commands
 
-INSERT INTO drivers VALUES (1, 'Lewis Hamilton','British',103);
+INSERT INTO drivers  VALUES (1, 'Lewis Hamilton','British',103);
 
 INSERT INTO drivers  VALUES (4, 'Fernando Alonso', 'Spanish',32);
 
@@ -107,12 +105,7 @@ Try it yourself!
 INSERT INTO drivers VALUES (5, 'Max Verstappen', 'Dutch', 51);
 INSERT INTO drivers VALUES (6, 'Juan Pablo Montoya', 'Colombian', 6);
 
-<<<<<<< HEAD
 INSERT INTO drivers VALUES (7, 'Emily Choi','Korean',2000);
-=======
-INSERT INTO drivers VALUES (7, 'Alejandro Sanchez Becerra','Colombian',2000);
-
->>>>>>> 1e1bad20876c9b790246ea8115fa94c49ae657fb
 -- SQLBook: Markup
 # <span style="color:darkblue"> II. Dataset Operations </span>
 
@@ -143,19 +136,11 @@ WHERE nationality = 'German';
 
 -- Evalute OR conditions
 SELECT * FROM drivers
-<<<<<<< HEAD
 WHERE (nationality = 'United States') OR (nationality = 'German');
 
 -- Evaluate AND conditions
 SELECT * FROM drivers
 WHERE (nationality = 'German') AND (driver_id = 2);
-=======
-WHERE (nationality = 'Colombian') OR (nationality = 'German');
-
--- Evaluate AND conditions
-SELECT * FROM drivers
-WHERE (nationality = 'German') AND (driver_id = 3) ;
->>>>>>> 1e1bad20876c9b790246ea8115fa94c49ae657fb
 
 -- SQLBook: Markup
 <font size="5"> 
@@ -215,6 +200,7 @@ SELECT driver_name, nationality, driver_id, victories FROM drivers;
 
 Groupby + Aggregate
 -- SQLBook: Code
+-- Active: 1710939164677@@127.0.0.1@5432
 -- This command computes summary statistics by nationalitySELECT COUNT(*) AS num_rows,
 -- Including "nationality" (the grouping column) is optional in the select
 SELECT nationality,
